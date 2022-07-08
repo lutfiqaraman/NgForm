@@ -12,4 +12,9 @@ export class SimpleformComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSubmit(value: any) {
+    console.log("The username is " + value.username);
+    console.log("The ssn is " + value.ssn);
+  }
+
 }
