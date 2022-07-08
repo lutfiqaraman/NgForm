@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NgForm} from "@angular/forms";
 
 @Component({
   selector: 'app-simpleform',
@@ -12,9 +13,9 @@ export class SimpleformComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit(value: any) {
-    console.log("The username is " + value.username);
-    console.log("The ssn is " + value.ssn);
+  onSubmit(dataForm: NgForm) {
+    console.log("The username is " + dataForm.value.username);
+    console.log("The ssn is " + dataForm.value.ssn);
   }
 
 }
