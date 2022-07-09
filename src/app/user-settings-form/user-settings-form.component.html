@@ -15,7 +15,7 @@
       </label>
     </div>
 
-    <h5>User Interface Style</h5>
+    <p>User Interface Style</p>
 
     <div class="mb-3">
       <div class="form-check">
@@ -38,6 +38,21 @@
           Medium
         </label>
       </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="subscriptionType">Subscription Type</label>
+      <select class="form-select" aria-label="Default select example" id="subscriptionType">
+        <option value="-1" selected>please select</option>
+        <option value="1">Monthly</option>
+        <option value="2">Annual</option>
+        <option value="3">Lifetime</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label" for="notes">Notes</label>
+      <textarea class="form-control" id="notes"></textarea>
     </div>
 
     <button class="btn btn-primary mb-3">Send</button>
