@@ -1,0 +1,31 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-12 mt-3">
+      <h3>Reactive Form</h3>
+    </div>
+  </div>
+
+  <hr>
+
+  <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+
+    <div class="mb-3">
+      <label for="rUsername" class="form-label">Username</label>
+      <input type="text" id="rUsername" class="form-control" formControlName="reactive_username">
+    </div>
+
+    <div class="mb-3">
+      <label for="rSSN" class="form-label">SSN</label>
+      <input type="text" id="rSSN" class="form-control" formControlName="reactive_ssn">
+    </div>
+
+    <div class="mb-3">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+
+  </form>
+
+</div>
+
+

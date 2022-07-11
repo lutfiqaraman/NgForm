@@ -6,12 +6,14 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { UserSettingsFormComponent } from './user-settings-form/user-settings-form.component';
 import { SimpleformComponent } from './simpleform/simpleform.component';
 import {AppRoutingModule} from "./app-routing.module";
+import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserSettingsFormComponent,
-    SimpleformComponent
+    SimpleformComponent,
+    ReactiveformComponent
   ],
   imports: [
     BrowserModule,
