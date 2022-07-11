@@ -13,7 +13,7 @@ export class ReactiveformComponent implements OnInit {
   constructor() {
     this.reactiveForm = new FormGroup({
       reactive_username: new FormControl(''),
-      reactive_ssn:      new FormControl('')
+      reactive_ssn: new FormControl('')
     });
   }
 
