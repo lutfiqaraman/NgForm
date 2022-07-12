@@ -22,11 +22,17 @@ export class UpdateformComponent implements OnInit {
   }
 
   updateEntireForm() {
-
+    this.updateForm.setValue({
+      id: 123,
+      description: 'A great product',
+      seller: 'Seller Intl Group'
+    });
   }
 
   updatePartOfTheForm() {
-
+    this.updateForm.patchValue({
+      description: 'The best updated product'
+    });
   }
 
 }
