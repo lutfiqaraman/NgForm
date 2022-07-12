@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-updateform',
@@ -7,9 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UpdateformComponent implements OnInit {
 
-  constructor() { }
+  updateForm: FormGroup;
+
+  constructor() {
+    this.updateForm = new FormGroup({
+      id: new FormControl(''),
+      description: new FormControl(''),
+      seller: new FormControl('')
+    });
+  }
 
   ngOnInit(): void {
+  }
+
+  updateEntireForm() {
+
+  }
+
+  updatePartOfTheForm() {
+
   }
 
 }

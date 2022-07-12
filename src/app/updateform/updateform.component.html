@@ -1,1 +1,33 @@
-<p>updateform works!</p>
+<div class="container">
+
+  <div class="row">
+    <div class="col-12 mt-3">
+      <h3>Update Form</h3>
+    </div>
+  </div>
+
+  <hr>
+
+  <form [formGroup]="updateForm">
+
+    <div class="mb-3">
+      <label for="productId" class="form-label">Product ID</label>
+      <input type="text" id="productId" class="form-control" formControlName="id">
+    </div>
+
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <input type="text" id="description" class="form-control" formControlName="description">
+    </div>
+
+    <div class="mb-3">
+      <label for="seller" class="form-label">Seller</label>
+      <input type="text" id="seller" class="form-control" formControlName="seller">
+    </div>
+
+  </form>
+
+  <button class="btn btn-primary me-2" (click)="updateEntireForm()">Populate</button>
+  <button class="btn btn-info me-2" (click)="updatePartOfTheForm()">Update Description</button>
+  <button class="btn btn-danger me-2" (click)="updateForm.reset()">Reset</button>
+</div>
