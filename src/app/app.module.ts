@@ -8,6 +8,7 @@ import { SimpleformComponent } from './simpleform/simpleform.component';
 import {AppRoutingModule} from "./app-routing.module";
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { UpdateformComponent } from './updateform/updateform.component';
+import { ValidateformComponent } from './validateform/validateform.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { UpdateformComponent } from './updateform/updateform.component';
     UserSettingsFormComponent,
     SimpleformComponent,
     ReactiveformComponent,
-    UpdateformComponent
+    UpdateformComponent,
+    ValidateformComponent
   ],
   imports: [
     BrowserModule,
