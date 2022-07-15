@@ -8,16 +8,17 @@
 
   <hr>
 
-  <form>
+  <form [formGroup]="ssnForm">
 
     <div class="mb-3">
       <label for="username" class="form-label">Username</label>
-      <input type="text" id="username" class="form-control" name="username" ngModel>
+      <input type="text" id="username" class="form-control" name="username" formControlName="username">
+      <span class="error" *ngIf="username.invalid && username.touched">Username is required</span>
     </div>
 
     <div class="mb-3">
       <label for="username" class="form-label">SSN</label>
-      <input type="text" id="ssn" class="form-control" name="ssn" ngModel>
+      <input type="text" id="ssn" class="form-control" name="ssn" formControlName="ssn">
     </div>
 
     <div class="mb-3">

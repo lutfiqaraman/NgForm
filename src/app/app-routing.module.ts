@@ -4,13 +4,16 @@ import {UserSettingsFormComponent} from "./user-settings-form/user-settings-form
 import {SimpleformComponent} from "./simpleform/simpleform.component";
 import {ReactiveformComponent} from "./reactiveform/reactiveform.component";
 import {UpdateformComponent} from "./updateform/updateform.component";
+import {ValidateformComponent} from "./validateform/validateform.component";
 
 
 const routes: Routes = [
   { path: '', component: UserSettingsFormComponent },
   { path: 'simpleform', component: SimpleformComponent },
   { path: 'reactiveform', component: ReactiveformComponent },
-  { path: 'updateform', component: UpdateformComponent }
+  { path: 'updateform', component: UpdateformComponent },
+  { path: 'validateform', component: ValidateformComponent }
+
 ];
 
 @NgModule({
