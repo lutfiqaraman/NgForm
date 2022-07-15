@@ -5,6 +5,7 @@ import {SimpleformComponent} from "./simpleform/simpleform.component";
 import {ReactiveformComponent} from "./reactiveform/reactiveform.component";
 import {UpdateformComponent} from "./updateform/updateform.component";
 import {ValidateformComponent} from "./validateform/validateform.component";
+import {RegisterformComponent} from "./registerform/registerform.component";
 
 
 const routes: Routes = [
@@ -12,7 +13,8 @@ const routes: Routes = [
   { path: 'simpleform', component: SimpleformComponent },
   { path: 'reactiveform', component: ReactiveformComponent },
   { path: 'updateform', component: UpdateformComponent },
-  { path: 'validateform', component: ValidateformComponent }
+  { path: 'validateform', component: ValidateformComponent },
+  { path: 'register', component: RegisterformComponent }
 
 ];
 
