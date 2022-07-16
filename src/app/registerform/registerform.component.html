@@ -9,23 +9,40 @@
   <hr>
 
   <div class="col-md-6 offset-md-3">
+
     <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
       <div class="mb-3">
         <label for="email" class="form-label">Email</label>
-        <input type="email" [ngClass]="{'is-invalid': submitted && formControls['email'].errors }" id="email" class="form-control" formControlName="email">
-        <span *ngIf="submitted && formControls['email'].errors" class="text-danger">
+        <input type="email" [ngClass]="{'is-invalid': submitted && formControls['email'].errors }" id="email" class="form-control" formControlName="email" placeholder="email is here">
+
+        <span *ngIf="submitted && formControls['email'].hasError('required')" class="text-danger">
           email is required
+        </span>
+
+        <span *ngIf="submitted && formControls['email'].hasError('email')" class="text-danger">
+          email is not valid, ex: yourcount@text.com
         </span>
       </div>
 
       <div class="mb-3">
         <label for="name" class="form-label">Name</label>
-        <input type="text" [ngClass]="{'is-invalid': submitted && formControls['name'].errors }" id="name" class="form-control" formControlName="name">
+        <input type="text" [ngClass]="{'is-invalid': submitted && formControls['name'].errors }" id="name" class="form-control" formControlName="name" placeholder="name is here">
+        <span *ngIf="submitted && formControls['name'].hasError('required')" class="text-danger">
+          name is required
+        </span>
       </div>
 
       <div class="mb-3">
         <label for="password" class="form-label">Password</label>
-        <input type="password" [ngClass]="{'is-invalid': submitted && formControls['password'].errors }" id="password" class="form-control" formControlName="password">
+        <input type="password" [ngClass]="{'is-invalid': submitted && formControls['password'].errors }" id="password" class="form-control" formControlName="password" placeholder="password is here">
+        <span *ngIf="submitted && formControls['password'].hasError('required')" class="text-danger">
+          password is required
+        </span>
+
+        <span *ngIf="submitted && formControls['password'].hasError('minlength')" class="text-danger">
+          password must be at least 6 characters
+        </span>
       </div>
 
       <div class="mb-3">
@@ -33,6 +50,6 @@
       </div>
 
     </form>
-  </div>
 
+  </div>
 </div>
